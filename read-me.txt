@@ -1,0 +1,22 @@
+Instructions:
+
+1) The Model has been trained and the weights are saved in the 'emotion_model.h5' file
+
+2)If the Project dosent give output on the first try please try again , it will work.
+
+3)Plesase Use Python 3.5-3.8 env to compile and run 
+
+4)TensorFlow/Keras library is supported in  python 3.5-3.8 64-bit version only
+
+5) Libraries needed to be installed are as follows:
+
+>> Open-cv
+>>Tensorflowx
+>>Keras
+>>numpy
+
+**Personal Recommendation Python 3.8 as the program has been tested using python 3.8 enviroment **
+
+THANK YOU 
+
+-Dwij Siyal
