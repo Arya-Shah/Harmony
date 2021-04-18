@@ -104,15 +104,6 @@ class MaterialDrawer extends StatelessWidget {
                 title: "User",
                 isSelected: currentPage == "Profile" ? true : false),*/
 
-                DrawerTile(
-                icon: Icons.exit_to_app,
-                onTap: () {
-                  if (currentPage != "Sign In")
-                    Navigator.pushReplacementNamed(context, '/signin');
-                },
-                iconColor: Colors.white,
-                title: "Sign In",
-                isSelected: currentPage == "Sign In" ? true : false),
                 /*DrawerTile(
                 icon: Icons.open_in_browser,
                 onTap: () {
@@ -151,14 +142,14 @@ class MaterialDrawer extends StatelessWidget {
                     title: "Concentration",
                     isSelected: currentPage == "Concentration" ? true : false),
                 DrawerTile(
-                    icon: Icons.settings,
+                    icon: Icons.exit_to_app,
                     onTap: () {
-                      if (currentPage != "Settings")
-                        Navigator.pushReplacementNamed(context, '/settings');
+                      if (currentPage != "Sign In")
+                        Navigator.pushReplacementNamed(context, '/signin');
                     },
                     iconColor: Colors.white,
-                    title: "Settings",
-                    isSelected: currentPage == "Settings" ? true : false),
+                    title: "Sign Out",
+                    isSelected: currentPage == "Sign In" ? true : false),
           ],
         ))
       ])),
