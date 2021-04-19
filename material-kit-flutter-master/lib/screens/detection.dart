@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:opencv/opencv.dart';
 import 'package:camera/camera.dart';
 
 
@@ -14,6 +14,7 @@ class detection extends StatefulWidget{
   _detectionstate createState() => _detectionstate();
 }
 class _detectionstate extends State<detection>{
+
   bool switchValueOne;
   bool switchValueTwo;
   /// List of available cameras
@@ -36,7 +37,7 @@ class _detectionstate extends State<detection>{
 
     // cameras[0] for rear-camera
     cameraController =
-        CameraController(cameras[1], ResolutionPreset.high, enableAudio: false);
+        CameraController(cameras[1], ResolutionPreset.veryHigh, enableAudio: false);
    cameraController.initialize();
 
 
@@ -65,20 +66,20 @@ class _detectionstate extends State<detection>{
 
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
-    bool cam = false;
-    while(cam == false) {
+    //final Size screenSize = MediaQuery.of(context).size;
+
+
       // Return empty container while the camera is not initialized
       if (cameraController == null || !cameraController.value.isInitialized) {
-        cam = false;
+
         return Center(child: CircularProgressIndicator());
       } else {
-        cam = true;
+
         return AspectRatio(
             aspectRatio: cameraController.value.aspectRatio,
             child: CameraPreview(cameraController));
       }
-    }
+
 
 
   }
