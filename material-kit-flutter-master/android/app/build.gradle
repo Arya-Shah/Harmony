@@ -64,4 +64,12 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation platform('com.google.firebase:firebase-bom:27.0.0')
     implementation platform('com.google.firebase:firebase-bom:27.0.0')
+    api 'com.google.firebase:firebase-ml-vision-face-model:20.0.2'
+    api 'com.google.firebase:firebase-ml-vision-image-label-model:20.0.2'
+
+    implementation 'com.google.android.gms:play-services-vision:20.1.1'
+    implementation 'com.google.android.gms:play-services-vision-common:19.1.1'
+    implementation 'com.google.android.gms:play-services-vision-face-contour-internal:16.0.3'
+    implementation 'com.google.android.gms:play-services-vision-image-labeling-internal:16.0.5'
+    implementation 'com.google.android.gms:play-services-vision-image-label:18.0.5'
 }

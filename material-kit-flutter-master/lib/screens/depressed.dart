@@ -57,7 +57,7 @@ List<Map<String, String>> imgArray = [
   },
   {
     "img":
-    "assets/img/d3.jpg",
+    "assets/img/depressed/d3.jpg",
     "title": " Sleep Hypnosis",
     "description":
     "Instant Depression Removal - Anxiety Relief | Sleep Hypnosis Binaural Beats Session",
