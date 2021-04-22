@@ -11,94 +11,58 @@ import 'package:material_kit_flutter/widgets/slider-product.dart';
 List<Map<String, String>> imgArray = [
   {
     "img":
-    "assets/img/depressed/t1.png",
-    "title": "Theta Binural Beats",
+    "assets/img/happy/h1.jpg",
+    "title": "Serotonin Release Music",
     "description":
-    "4 HOURS of ULTRA DEEP RELAXATION. Binaural Beat (432Hz Music) Theta Wave.",
+    "Happiness Frequency 💚 Serotonin Release Music with Binaural Beats, Relaxing Music for Happiness",
     "price": "View on Youtube",
-    "link" : "https://www.youtube.com/watch?v=EKX-j4VWXcE&t=191s"
+    "link" : "https://www.youtube.com/watch?v=GbKkMCGLDpw"
   },
   {
     "img":
-    "assets/img/depressed/t2.png",
-    "title": "Healing Music",
+    "assets/img/happy/h2.jpg",
+    "title": "Happiness & Motivation",
     "description":
-    "Overcome Depression - Binaural Beats Music to Boost Serotonin, Dopamine and Endorphin, Healing Music",
+    "Confidence, Happiness & Motivation - Binaural Beats & Isochronic Tones (Subliminal Messages)",
     "price": "View on Youtube",
-    "link": "https://www.youtube.com/watch?v=3pNpHZ1yv3I"
+    "link": "https://www.youtube.com/watch?v=GXeAOtb1VeA"
 
   },
   {
     "img":
-    "assets/img/depressed/t3.png",
-    "title": "LIVE",
+    "assets/img/happy/h3.jpg",
+    "title": "True Inner Peace",
     "description":
-    "Calming Music Healing 24/7 💤 | Sleeping Music 528Hz | Positive Energy Cleanse | Sleep Deep Music",
-    "price": "\$300",
-    "link": "https://www.youtube.com/watch?v=Ih5E-2Kg95U"
+    "True Inner Peace - Heal Your Soul - Binaural Beats & Isochronic Tones (With Subliminal Messages)",
+
+    "link": "https://www.youtube.com/watch?v=Kfy-dwPBtKU"
   },
   {
     "img":
-    "assets/img/depressed/d1.jpg",
-    "title": "Brainwave Music",
+    "assets/img/happy/h4.jpg",
+    "title": "Remove Mental Blockages",
     "description":
-    "Binaural Beats for Depression Healing, Overcome Depression with Brainwave Music",
+    "Remove Mental Blockages & Subconscious Negativity ☯ Dissolve Negative Patterns ☯ Binaural Beats",
 
-    "link": "https://www.youtube.com/watch?v=7GSre2_s2uo"
+    "link": "https://www.youtube.com/watch?v=IIfw9kAbMlc"
   },
   {
     "img":
-    "assets/img/depressed/d2.jpg",
-    "title": "Anxiety Relief ",
+    "assets/img/happy/h5.jpg",
+    "title": "Alpha Waves for Serotonin",
     "description":
-    "Depression Removal | Anxiety Relief | Binaural Beats",
+    "Serotonin Release - Alpha Waves for Serotonin & Endorphins - Binaural Beats - Meditation Music",
 
-    "link": "https://www.youtube.com/watch?v=o-8vOjYU-W0"
+    "link": "https://www.youtube.com/watch?v=dPqCRyzhXn8"
   },
   {
     "img":
-    "assets/img/depressed/d3.jpg",
-    "title": " Sleep Hypnosis",
+    "assets/img/happy/h6.jpg",
+    "title": " Endorphin Release Music",
     "description":
-    "Instant Depression Removal - Anxiety Relief | Sleep Hypnosis Binaural Beats Session",
+    "Happiness Frequency: Serotonin, Dopamine, Endorphin Release Music, Release Negativityn",
 
-    "link": "https://www.youtube.com/watch?v=91OKIDf3i48"
-  },
-  {
-    "img":
-    "assets/img/depressed/d4.jpg",
-    "title": "LOFI HIPHOP ",
-    "description":
-    "LOFI HIPHOP with Healing Binaural Beats for Depression | BINAURAL BEAT THERAPY",
-
-    "link": "https://www.youtube.com/watch?v=zJPGW1faKPY"
-  },
-  {
-    "img":
-    "assets/img/depressed/d5.jpg",
-    "title": "Neurosis Relief ",
-    "description":
-    "15.5 Hz Depression Disorders, Neurosis - Relief ❁ Binaural Beats ☯ PURE BRAINWAVE ENTRAINMENT",
-
-    "link": "https://www.youtube.com/watch?v=RP_GtoywU24"
-  },
-  {
-    "img":
-    "assets/img/depressed/d6.jpg",
-    "title": "Delta Binaural Beats",
-    "description":
-    "Anti-Depression - Delta Binaural Beats - Pure 1.5Hz",
-
-    "link": "https://www.youtube.com/watch?v=AKjD6q19R5M"
-  },
-  {
-    "img":
-    "assets/img/depressed/d7.jpg",
-    "title": "Depression healing ",
-    "description":
-    "Overcome Depression and Anxiety with Binaural Beats (Powerful)",
-
-    "link": "https://www.youtube.com/watch?v=PwRi49t5TjM"
+    "link": "https://www.youtube.com/watch?v=8M143iRrbgw"
   },
   {
     "img":

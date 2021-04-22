@@ -11,95 +11,69 @@ import 'package:material_kit_flutter/widgets/slider-product.dart';
 List<Map<String, String>> imgArray = [
   {
     "img":
-    "assets/img/depressed/t1.png",
-    "title": "Theta Binural Beats",
+    "assets/img/fear/f1.jpg",
+    "title": "let go of Worries",
     "description":
-    "4 HOURS of ULTRA DEEP RELAXATION. Binaural Beat (432Hz Music) Theta Wave.",
+    "852 Hz - LET GO of Fear, Overthinking & Worries | Cleanse Destructive Energy | Awakening Intuition",
     "price": "View on Youtube",
-    "link" : "https://www.youtube.com/watch?v=EKX-j4VWXcE&t=191s"
+    "link" : "https://www.youtube.com/watch?v=-vvpsIiUVKY"
   },
   {
     "img":
-    "assets/img/depressed/t2.png",
-    "title": "Healing Music",
+    "assets/img/fear/f2.jpg",
+    "title": "BECOME FEARLESS",
     "description":
-    "Overcome Depression - Binaural Beats Music to Boost Serotonin, Dopamine and Endorphin, Healing Music",
+    "SOLFEGGIO 396 Hz ⧊ BECOME FEARLESS ⧊ POWERFUL Sleep Meditation Music | Solfeggio Frequencies",
     "price": "View on Youtube",
-    "link": "https://www.youtube.com/watch?v=3pNpHZ1yv3I"
+    "link": "https://www.youtube.com/watch?v=ZeBHeD7gTzI"
 
   },
   {
     "img":
-    "assets/img/depressed/t3.png",
-    "title": "LIVE",
+    "assets/img/fear/f3.jpg",
+    "title": "432Hz Deep Relaxation",
     "description":
-    "Calming Music Healing 24/7 💤 | Sleeping Music 528Hz | Positive Energy Cleanse | Sleep Deep Music",
-    "price": "\$300",
-    "link": "https://www.youtube.com/watch?v=Ih5E-2Kg95U"
+    "DEEP Theta Binaural Beats ➤ LET GO of Fear, Overthinking & Worries ➤ 432Hz Deep Relaxation",
+
+    "link": "https://www.youtube.com/watch?v=Mgwd_3k3pOw"
   },
   {
     "img":
-    "assets/img/depressed/d1.jpg",
-    "title": "Brainwave Music",
+    "assets/img/fear/f4.jpg",
+    "title": "Destroy Unconscious Blockage",
     "description":
-    "Binaural Beats for Depression Healing, Overcome Depression with Brainwave Music",
+    "432 Hz Destroy Unconscious Blockages & Fear, Binaural Beats",
 
-    "link": "https://www.youtube.com/watch?v=7GSre2_s2uo"
+    "link": "https://www.youtube.com/watch?v=3hxvULliUa0"
   },
   {
     "img":
-    "assets/img/depressed/d2.jpg",
-    "title": "Anxiety Relief ",
+    "assets/img/fear/f5.jpg",
+    "title": "Sound Therapy",
     "description":
-    "Depression Removal | Anxiety Relief | Binaural Beats",
+    "Release Fear,Anxiety And Stress Subliminal - Sound Therapy with Binaural Beats",
 
-    "link": "https://www.youtube.com/watch?v=o-8vOjYU-W0"
+    "link": "https://www.youtube.com/watch?v=HrB8DXFAt74"
   },
   {
     "img":
-    "assets/img/depressed/d3.jpg",
-    "title": " Sleep Hypnosis",
+    "assets/img/fear/f6.jpg",
+    "title": " Release Subconscious Fear",
     "description":
-    "Instant Depression Removal - Anxiety Relief | Sleep Hypnosis Binaural Beats Session",
+    "Release Subconscious Fear & Trapped Negative Energy ➤ DEEP Theta BinauralBeat.",
 
-    "link": "https://www.youtube.com/watch?v=91OKIDf3i48"
+    "link": "https://www.youtube.com/watch?v=3iFN52ok6bs"
   },
   {
     "img":
-    "assets/img/depressed/d4.jpg",
-    "title": "LOFI HIPHOP ",
+    "assets/img/fear/f7.jpg",
+    "title": "Overcome Phobia & Anxiety: ",
     "description":
-    "LOFI HIPHOP with Healing Binaural Beats for Depression | BINAURAL BEAT THERAPY",
+    "Overcome Phobia & Anxiety: Cleanse Destructive Energy, Release Fear Binaural Beats | Mood Elevator",
 
-    "link": "https://www.youtube.com/watch?v=zJPGW1faKPY"
+    "link": "https://www.youtube.com/watch?v=Np1SebasvPg"
   },
-  {
-    "img":
-    "assets/img/depressed/d5.jpg",
-    "title": "Neurosis Relief ",
-    "description":
-    "15.5 Hz Depression Disorders, Neurosis - Relief ❁ Binaural Beats ☯ PURE BRAINWAVE ENTRAINMENT",
 
-    "link": "https://www.youtube.com/watch?v=RP_GtoywU24"
-  },
-  {
-    "img":
-    "assets/img/depressed/d6.jpg",
-    "title": "Delta Binaural Beats",
-    "description":
-    "Anti-Depression - Delta Binaural Beats - Pure 1.5Hz",
-
-    "link": "https://www.youtube.com/watch?v=AKjD6q19R5M"
-  },
-  {
-    "img":
-    "assets/img/depressed/d7.jpg",
-    "title": "Depression healing ",
-    "description":
-    "Overcome Depression and Anxiety with Binaural Beats (Powerful)",
-
-    "link": "https://www.youtube.com/watch?v=PwRi49t5TjM"
-  },
   {
     "img":
     "assets/img/icons/more.png",

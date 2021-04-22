@@ -70,6 +70,10 @@ flutter:
     - assets/img/focus/
     - assets/img/relax/
     - assets/img/icons/
+    - assets/img/happy/
+    - assets/img/fear/
+    - assets/img/angry/
+    - assets/img/sad/
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

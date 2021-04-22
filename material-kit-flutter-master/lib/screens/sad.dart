@@ -11,95 +11,33 @@ import 'package:material_kit_flutter/widgets/slider-product.dart';
 List<Map<String, String>> imgArray = [
   {
     "img":
-    "assets/img/depressed/t1.png",
-    "title": "Theta Binural Beats",
+    "assets/img/sad/s1.jpg",
+    "title": "Sad Piano Meditation Therapy",
     "description":
-    "4 HOURS of ULTRA DEEP RELAXATION. Binaural Beat (432Hz Music) Theta Wave.",
+    "MUSIC FOR CRYING! Sad Piano Meditation Therapy Binaural Waves",
     "price": "View on Youtube",
-    "link" : "https://www.youtube.com/watch?v=EKX-j4VWXcE&t=191s"
+    "link" : "https://www.youtube.com/watch?v=PjQLkOXlqKI"
   },
   {
     "img":
-    "assets/img/depressed/t2.png",
-    "title": "Healing Music",
+    "assets/img/sad/s2.jpg",
+    "title": "Heal Your Past",
     "description":
-    "Overcome Depression - Binaural Beats Music to Boost Serotonin, Dopamine and Endorphin, Healing Music",
+    "Heal Your Past & Let Go Of Your Pain - Binaural Beats & Isochronic Tones (With Subliminal Messages)",
     "price": "View on Youtube",
-    "link": "https://www.youtube.com/watch?v=3pNpHZ1yv3I"
+    "link": "https://www.youtube.com/watch?v=0oQ-EAS3b7w"
 
   },
   {
     "img":
-    "assets/img/depressed/t3.png",
+    "assets/img/sad/s3.jpg",
     "title": "LIVE",
     "description":
-    "Calming Music Healing 24/7 💤 | Sleeping Music 528Hz | Positive Energy Cleanse | Sleep Deep Music",
-    "price": "\$300",
-    "link": "https://www.youtube.com/watch?v=Ih5E-2Kg95U"
-  },
-  {
-    "img":
-    "assets/img/depressed/d1.jpg",
-    "title": "Brainwave Music",
-    "description":
-    "Binaural Beats for Depression Healing, Overcome Depression with Brainwave Music",
+    "this beat will make you cry",
 
-    "link": "https://www.youtube.com/watch?v=7GSre2_s2uo"
+    "link": "https://www.youtube.com/watch?v=gjgcSLuy2V8"
   },
-  {
-    "img":
-    "assets/img/depressed/d2.jpg",
-    "title": "Anxiety Relief ",
-    "description":
-    "Depression Removal | Anxiety Relief | Binaural Beats",
 
-    "link": "https://www.youtube.com/watch?v=o-8vOjYU-W0"
-  },
-  {
-    "img":
-    "assets/img/depressed/d3.jpg",
-    "title": " Sleep Hypnosis",
-    "description":
-    "Instant Depression Removal - Anxiety Relief | Sleep Hypnosis Binaural Beats Session",
-
-    "link": "https://www.youtube.com/watch?v=91OKIDf3i48"
-  },
-  {
-    "img":
-    "assets/img/depressed/d4.jpg",
-    "title": "LOFI HIPHOP ",
-    "description":
-    "LOFI HIPHOP with Healing Binaural Beats for Depression | BINAURAL BEAT THERAPY",
-
-    "link": "https://www.youtube.com/watch?v=zJPGW1faKPY"
-  },
-  {
-    "img":
-    "assets/img/depressed/d5.jpg",
-    "title": "Neurosis Relief ",
-    "description":
-    "15.5 Hz Depression Disorders, Neurosis - Relief ❁ Binaural Beats ☯ PURE BRAINWAVE ENTRAINMENT",
-
-    "link": "https://www.youtube.com/watch?v=RP_GtoywU24"
-  },
-  {
-    "img":
-    "assets/img/depressed/d6.jpg",
-    "title": "Delta Binaural Beats",
-    "description":
-    "Anti-Depression - Delta Binaural Beats - Pure 1.5Hz",
-
-    "link": "https://www.youtube.com/watch?v=AKjD6q19R5M"
-  },
-  {
-    "img":
-    "assets/img/depressed/d7.jpg",
-    "title": "Depression healing ",
-    "description":
-    "Overcome Depression and Anxiety with Binaural Beats (Powerful)",
-
-    "link": "https://www.youtube.com/watch?v=PwRi49t5TjM"
-  },
   {
     "img":
     "assets/img/icons/more.png",

@@ -92,10 +92,10 @@ class _detectionstate extends State<detection>{
     );
   }
   CameraController cameraController = CameraMlVisionState().cameraController;
-  void startimage() {
+  void startimage() async  {
     //cameraController.initialize();
-    cameraController.startImageStream(onLatestImageAvailable);
-    detector.runtimeType;
+    await cameraController.startImageStream(onLatestImageAvailable);
+
 
 
   }
@@ -112,7 +112,7 @@ class _detectionstate extends State<detection>{
 
   imageLib.Image img = ImageUtils.convertCameraImage(cameraImage);
   imageLib.Image croppedImage = imageLib.copyCrop(img,left,top,right,bottom);
-  
+
 
 
 
