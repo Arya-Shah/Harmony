@@ -71,21 +71,21 @@ class MaterialDrawer extends StatelessWidget {
               ],
             ))),*/
             Expanded(
-              child: ListView(
-              padding: EdgeInsets.only(top: 50, left: 8, right: 8),
-              children: [
-                DrawerTile(
-                icon: Icons.home,
-                onTap: () {
-                  if (currentPage != "Home")
-                    Navigator.pushNamed(context, '/home');
-                },
-                iconColor: Colors.white,
-                title: "Home",
-                isSelected: currentPage == "Home" ? true : false),
+                child: ListView(
+                  padding: EdgeInsets.only(top: 50, left: 8, right: 8),
+                  children: [
+                    DrawerTile(
+                        icon: Icons.home,
+                        onTap: () {
+                          if (currentPage != "Home")
+                            Navigator.pushReplacementNamed(context, '/home');
+                        },
+                        iconColor: Colors.white,
+                        title: "Home",
+                        isSelected: currentPage == "Home" ? true : false),
 
 
-                /*DrawerTile(
+                    /*DrawerTile(
                 icon: Icons.settings_input_component,
                 onTap: () {
                   if (currentPage != "Components")
@@ -104,7 +104,7 @@ class MaterialDrawer extends StatelessWidget {
                 title: "User",
                 isSelected: currentPage == "Profile" ? true : false),*/
 
-                /*DrawerTile(
+                    /*DrawerTile(
                 icon: Icons.open_in_browser,
                 onTap: () {
                   if (currentPage != "Sign Up")
@@ -114,54 +114,54 @@ class MaterialDrawer extends StatelessWidget {
                 title: "Sign Up",
                 isSelected: currentPage == "Sign Up" ? true : false),*/
 
-                DrawerTile(
-                    icon: Icons.arrow_forward_sharp,
-                    onTap: () {
-                      if (currentPage != "Depressed")
-                        Navigator.pushNamed(context, '/depressed');
-                    },
-                    iconColor: Colors.white,
-                    title: "Depressed",
-                    isSelected: currentPage == "Depressed" ? true : false),
-                DrawerTile(
-                    icon: Icons.arrow_forward_sharp,
-                    onTap: () {
-                      if (currentPage != "Relaxed")
-                        Navigator.pushNamed(context, '/Relaxed');
-                    },
-                    iconColor: Colors.white,
-                    title: "Relaxed",
-                    isSelected: currentPage == "Relaxed" ? true : false),
-                DrawerTile(
-                    icon: Icons.arrow_forward_sharp,
-                    onTap: () {
-                      if (currentPage != "Happy")
-                        Navigator.pushNamed(context, '/happy');
-                    },
-                    iconColor: Colors.white,
-                    title: "Happy",
-                    isSelected: currentPage == "Happy" ? true : false),
-                DrawerTile(
-                    icon: Icons.arrow_forward_sharp,
-                    onTap: () {
-                      if (currentPage != "Concentration")
-                        Navigator.pushNamed(context, '/Concentration');
-                    },
-                    iconColor: Colors.white,
-                    title: "Concentration",
-                    isSelected: currentPage == "Concentration" ? true : false),
-                DrawerTile(
-                    icon: Icons.exit_to_app,
-                    onTap: () {
-                      if (currentPage != "Sign In")
-                        Navigator.pushReplacementNamed(context, '/signin');
-                    },
-                    iconColor: Colors.white,
-                    title: "Sign Out",
-                    isSelected: currentPage == "Sign In" ? true : false),
-          ],
-        ))
-      ])),
+                    DrawerTile(
+                        icon: Icons.arrow_forward_sharp,
+                        onTap: () {
+                          if (currentPage != "Happy")
+                            Navigator.pushNamed(context, '/happy');
+                        },
+                        iconColor: Colors.white,
+                        title: "Happy",
+                        isSelected: currentPage == "Happy" ? true : false),
+                    DrawerTile(
+                        icon: Icons.arrow_forward_sharp,
+                        onTap: () {
+                          if (currentPage != "Angry")
+                            Navigator.pushNamed(context, '/angry');
+                        },
+                        iconColor: Colors.white,
+                        title: "Angry",
+                        isSelected: currentPage == "Angry" ? true : false),
+                    DrawerTile(
+                        icon: Icons.arrow_forward_sharp,
+                        onTap: () {
+                          if (currentPage != "Sad")
+                            Navigator.pushNamed(context, '/sad');
+                        },
+                        iconColor: Colors.white,
+                        title: "Sad",
+                        isSelected: currentPage == "Sad" ? true : false),
+                    DrawerTile(
+                        icon: Icons.arrow_forward_sharp,
+                        onTap: () {
+                          if (currentPage != "Fear")
+                            Navigator.pushNamed(context, '/fear');
+                        },
+                        iconColor: Colors.white,
+                        title: "Fear",
+                        isSelected: currentPage == "Fear" ? true : false),
+                    DrawerTile(
+                        icon: Icons.exit_to_app,
+                        onTap: () {
+                          if (currentPage != "Sign In")
+                            Navigator.pushReplacementNamed(context, '/signin');
+                        },
+                        iconColor: Colors.white,
+                        title: "Sign Out",
+                        isSelected: currentPage == "Sign In" ? true : false),
+                  ],
+                ))
+          ])),
     );
   }
 }

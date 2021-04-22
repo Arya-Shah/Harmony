@@ -2,9 +2,13 @@ import 'package:flutter/material.dart';
 // screens
 import 'package:material_kit_flutter/screens/Concentration.dart';
 import 'package:material_kit_flutter/screens/Relaxed.dart';
+import 'package:material_kit_flutter/screens/angry.dart';
 import 'package:material_kit_flutter/screens/depressed.dart';
+import 'package:material_kit_flutter/screens/fear.dart';
+import 'package:material_kit_flutter/screens/happy.dart';
 import 'package:material_kit_flutter/screens/home.dart';
 import 'package:material_kit_flutter/screens/profile.dart';
+import 'package:material_kit_flutter/screens/sad.dart';
 import 'package:material_kit_flutter/screens/settings.dart';
 import 'package:material_kit_flutter/screens/components.dart';
 import 'package:material_kit_flutter/screens/onboarding.dart';
@@ -23,7 +27,7 @@ class MaterialKitPROFlutter extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         initialRoute: "/signin",
         routes: {
-          "/onboarding": (context) =>  new Onboarding(),
+
           "/pro": ( context) =>  new Pro(),
           "/home": ( context) =>  new Home(),
           "/components": ( context) =>  new Components(),
@@ -34,6 +38,10 @@ class MaterialKitPROFlutter extends StatelessWidget {
           "/Concentration":( context) =>  new Concentration(),
           "/Relaxed":( context) =>  new Relaxed(),
           "/detection":( context) =>  new detection(),
+          "/happy":(context) => new Happy(),
+          "/sad":(context) => new Sad(),
+          "/fear":(context) => new Fear(),
+          "/angry":(context) => new Angry(),
     });
 
   }

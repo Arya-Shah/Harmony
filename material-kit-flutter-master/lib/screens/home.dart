@@ -133,7 +133,7 @@ class Home extends StatelessWidget {
                           Navigator.pushNamed(context, '/Relaxed');
                         },
                         elevation: 4.0,
-                        fillColor: bcolor,
+                        fillColor: bcolor ,
                         splashColor: Colors.deepPurpleAccent[400],
                         child: Image(image: AssetImage("assets/img/icons/man_sofa1.png")),
                         padding: EdgeInsets.all(40.0),

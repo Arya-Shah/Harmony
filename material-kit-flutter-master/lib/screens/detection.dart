@@ -1,8 +1,16 @@
+
+import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:opencv/opencv.dart';
 import 'package:camera/camera.dart';
-
+import 'package:tflite_flutter/tflite_flutter.dart';
+import 'package:tflite_flutter_helper/tflite_flutter_helper.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:image/image.dart';
+import 'package:image/image.dart' as imageLib;
+import 'package:path_provider/path_provider.dart';
+import 'package:material_kit_flutter/screens/image_utils.dart';
 import 'package:flutter_camera_ml_vision/flutter_camera_ml_vision.dart';
 import 'package:firebase_ml_vision/firebase_ml_vision.dart';
 
@@ -23,23 +31,31 @@ class _detectionstate extends State<detection>{
   List<CameraDescription> cameras;
 
   /// Controller
-  CameraController cameraController;
+
+
   Future<void> _initializeControllerFuture;
 
   @override
   void initState() {
     super.initState();
     //initializeCamera();
+    startimage();
 
   }
+
+
   List<Face> _faces = [];
   final _scanKey = GlobalKey<CameraMlVisionState>();
   CameraLensDirection cameraLensDirection = CameraLensDirection.front;
   FaceDetector detector =
   FirebaseVision.instance.faceDetector(FaceDetectorOptions(
+    enableClassification: true,
     enableTracking: true,
+    enableContours: true,
     mode: FaceDetectorMode.accurate,
   ));
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -49,6 +65,7 @@ class _detectionstate extends State<detection>{
       ),
       body: SizedBox.expand(
         child: CameraMlVision<List<Face>>(
+
           key: _scanKey,
           cameraLensDirection: cameraLensDirection,
           detector: detector.processImage,
@@ -74,17 +91,53 @@ class _detectionstate extends State<detection>{
       ),
     );
   }
+  CameraController cameraController = CameraMlVisionState().cameraController;
+  void startimage() {
+    //cameraController.initialize();
+    cameraController.startImageStream(onLatestImageAvailable);
+    detector.runtimeType;
+
+
+  }
+
+  onLatestImageAvailable(CameraImage cameraImage) async {
+  List <Face> inb = _faces;
+  Rect bounding = boundingbox;
+  int left = lef.round();
+  int right = rig.round();
+  int top = boundingbox.top.round();
+  int bottom = boundingbox.bottom.round();
+  int scalx = scalex.round();
+  int scaly = scaley.round();
+
+  imageLib.Image img = ImageUtils.convertCameraImage(cameraImage);
+  imageLib.Image croppedImage = imageLib.copyCrop(img,left,top,right,bottom);
+  
+
+
+
+
+  }
 }
 
+final picker = ImagePicker();
 class FaceDetectorPainter extends CustomPainter {
   FaceDetectorPainter(this.imageSize, this.faces, {this.reflection = false});
+
+
 
   final bool reflection;
   final Size imageSize;
   final List<Face> faces;
 
+
+
+
+
+
   @override
   void paint(Canvas canvas, Size size) {
+
     final paint = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = 2.0
@@ -110,24 +163,32 @@ class FaceDetectorPainter extends CustomPainter {
   }
 }
 
+Rect boundingbox;
+double lef, rig, cen, scalex,scaley;
 Rect _reflectionRect(bool reflection, Rect boundingBox, double width) {
+ boundingbox  = boundingBox;
   if (!reflection) {
     return boundingBox;
   }
   final centerX = width / 2;
+  cen = centerX;
   final left = ((boundingBox.left - centerX) * -1) + centerX;
+  lef = left;
   final right = ((boundingBox.right - centerX) * -1) + centerX;
+  rig = right;
   return Rect.fromLTRB(left, boundingBox.top, right, boundingBox.bottom);
 }
 
 Rect _scaleRect({
+
   @required Rect rect,
   @required Size imageSize,
   @required Size widgetSize,
 }) {
   final scaleX = widgetSize.width / imageSize.width;
+  scalex = scaleX;
   final scaleY = widgetSize.height / imageSize.height;
-
+  scaley = scaleY;
   final scaledRect = Rect.fromLTRB(
     rect.left.toDouble() * scaleX,
     rect.top.toDouble() * scaleY,
@@ -146,7 +207,7 @@ Rect _scaleRect({
 
     // cameras[0] for rear-camera
     cameraController =
-        CameraController(cameras[1], ResolutionPreset.veryHigh, enableAudio: false);
+        CameraController(cameras[1], ResolutionPreset.high, enableAudio: false);
    cameraController.initialize();
 
 
@@ -187,7 +248,7 @@ Rect _scaleRect({
       } else {
 
         return AspectRatio(
-            aspectRatio: cameraController.value.aspectRatio,
+            aspectRatio: cameraController.value.aspectRatio:1,
             child: CameraPreview(cameraController));
       }
 
