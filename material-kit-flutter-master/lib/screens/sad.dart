@@ -31,7 +31,7 @@ List<Map<String, String>> imgArray = [
   {
     "img":
     "assets/img/sad/s3.jpg",
-    "title": "LIVE",
+    "title": "Yep",
     "description":
     "this beat will make you cry",
 

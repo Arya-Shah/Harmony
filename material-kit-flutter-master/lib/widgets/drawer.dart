@@ -132,7 +132,7 @@ class MaterialDrawer extends StatelessWidget {
                     iconColor: Colors.white,
                     title: "Relaxed",
                     isSelected: currentPage == "Relaxed" ? true : false),
-                DrawerTile(
+                /*DrawerTile(
                     icon: Icons.arrow_forward_sharp,
                     onTap: () {
                       if (currentPage != "Happy")
@@ -140,7 +140,7 @@ class MaterialDrawer extends StatelessWidget {
                     },
                     iconColor: Colors.white,
                     title: "Happy",
-                    isSelected: currentPage == "Happy" ? true : false),
+                    isSelected: currentPage == "Happy" ? true : false),*/
                 DrawerTile(
                     icon: Icons.arrow_forward_sharp,
                     onTap: () {

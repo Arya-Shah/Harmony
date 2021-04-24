@@ -77,4 +77,16 @@ class ImageUtils {
     await fileOnDevice.writeAsBytes(jpeg, flush: true);
     print('Saved $appPath/out$i.jpg');
   }
+  static imageLib.Image grayscale(imageLib.Image src) {
+    final p = src.getBytes();
+    for (var i = 0, len = p.length; i < len; i += 4) {
+      final l = getLuminanceRgb(p[i], p[i + 1], p[i + 2]);
+      p[i] = l;
+      p[i + 1] = l;
+      p[i + 2] = l;
+    }
+    return src;
+  }
+  static int getLuminanceRgb(int r, int g, int b) =>
+      (0.299 * r + 0.587 * g + 0.114 * b).round();
 }

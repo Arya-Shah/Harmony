@@ -1,4 +1,5 @@
-
+import 'dart:async';
+import 'dart:math';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +40,7 @@ class _detectionstate extends State<detection>{
   void initState() {
     super.initState();
     //initializeCamera();
-    startimage();
+    //startimage();
 
   }
 
@@ -77,45 +78,106 @@ class _detectionstate extends State<detection>{
             );
           },
           onResult: (faces) {
+
             if (faces == null || faces.isEmpty || !mounted) {
               return;
             }
+
             setState(() {
               _faces = [...faces];
+              startimage();
             });
           },
+
           onDispose: () {
+
             detector.close();
           },
         ),
       ),
     );
   }
-  CameraController cameraController = CameraMlVisionState().cameraController;
+  //CameraController cameraController = CameraMlVisionState().cameraController;
   void startimage() async  {
     //cameraController.initialize();
-    await cameraController.startImageStream(onLatestImageAvailable);
+    CameraImage cam;
+    await CameraMlVisionState().cameraController.startImageStream(onLatestImageAvailable(cam) );
+
 
 
 
   }
+  Interpreter _interpreter;
 
-  onLatestImageAvailable(CameraImage cameraImage) async {
+  void loadModel({Interpreter interpreter}) async {
+
+    _interpreter = interpreter ??
+        await Interpreter.fromAsset(
+          "emotion_model.tflite",
+          options: InterpreterOptions()
+            ..threads = 2,
+        );
+  }
+  ImageProcessor imageProcessor;
+  TensorImage getProcessedImage(TensorImage inputImage) {
+    //padSize = max(inputImage.height, inputImage.width);
+    if (imageProcessor == null) {
+      imageProcessor = ImageProcessorBuilder().add(ResizeOp(48, 48, ResizeMethod.NEAREST_NEIGHBOUR)).build();
+    }
+    inputImage = imageProcessor.process(inputImage);
+    return inputImage;
+  }
+//Interpreter _interpreter = Interpreter.fromAsset("assets/emotion_model.tflite");
+  onLatestImageAvailable(cam) async {
+  /*Map <int, String> emotion = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"};
   List <Face> inb = _faces;
-  Rect bounding = boundingbox;
+
   int left = lef.round();
   int right = rig.round();
   int top = boundingbox.top.round();
   int bottom = boundingbox.bottom.round();
   int scalx = scalex.round();
   int scaly = scaley.round();
+  Object oi;
 
-  imageLib.Image img = ImageUtils.convertCameraImage(cameraImage);
-  imageLib.Image croppedImage = imageLib.copyCrop(img,left,top,right,bottom);
+  imageLib.Image rgbimg = ImageUtils.convertCameraImage(cam);
+  imageLib.Image grayimg = ImageUtils.grayscale(rgbimg);
+  imageLib.Image croppedImage = imageLib.copyCrop(grayimg, left * scalx, top * scaly, right * scalx, bottom * scaly);
+  /*imageLib.Image resiz = imageLib.copyResize(croppedImage, height: 48,
+      width: 48,
+      interpolation: Interpolation.nearest);*/
+  TensorImage inputImage = TensorImage.fromImage(croppedImage);
+  TensorImage inp = getProcessedImage(inputImage);
 
 
+  loadModel();
+  Object inputs = inp.buffer;
+  TensorBuffer output ;
+  _interpreter.run(inputs, output);
+  oi = output.buffer;
+  //sleep(new Duration(seconds: 2));
+*/
 
+//for(int i = 0; i <= 10000;i++ ){
+//print("he");
+//}
+Timer(const Duration(milliseconds: 3000), (){
+  int oi = 0;
+  if(oi == 0){
+    Navigator.pushReplacementNamed(context, "/angry");
 
+  }else if (oi == 1 || oi == 2){
+    Navigator.pushReplacementNamed(context, "/fear");
+  }
+  else if (oi == 3 || oi == 6){
+    Navigator.pushReplacementNamed(context, "/happy");
+  }
+  else if (oi == 4 || oi == 5){
+    Navigator.pushReplacementNamed(context, "/sad");
+
+  }
+
+});
 
   }
 }
@@ -124,15 +186,9 @@ final picker = ImagePicker();
 class FaceDetectorPainter extends CustomPainter {
   FaceDetectorPainter(this.imageSize, this.faces, {this.reflection = false});
 
-
-
   final bool reflection;
   final Size imageSize;
   final List<Face> faces;
-
-
-
-
 
 
   @override
