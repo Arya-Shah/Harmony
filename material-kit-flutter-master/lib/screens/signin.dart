@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:material_kit_flutter/constants/Theme.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:material_kit_flutter/widgets/input.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:material_kit_flutter/widgets/navbar.dart';
 import 'package:material_kit_flutter/widgets/drawer.dart';
 
@@ -14,8 +15,19 @@ class Signin extends StatefulWidget {
   _SigninState createState() => _SigninState();
 }
 class _SigninState extends State<Signin>{
+
+  final _auth = FirebaseAuth.instance;
+
   bool switchValueOne;
   bool switchValueTwo;
+
+  String email;
+  String password;
+
+  void signin(){
+
+  }
+
 
   void initState() {
     setState(() {
@@ -82,6 +94,8 @@ class _SigninState extends State<Signin>{
                     textColor: MaterialColors.input,
                     hintTextColor: Colors.white,
                     prefixIcon: Icon(Icons.lock_rounded, color: Colors.white,),
+
+
 
                   ),
                 ),
